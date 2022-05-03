@@ -1,0 +1,114 @@
+@import "loader.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(0,0,0,0.1);
+  list-style: none;
+  text-decoration: none;
+}
+.navbar li {
+  margin: 0 20px;
+}
+.content {
+  max-width: 970px;
+  margin: auto;
+  padding: 0 20px;
+}
+.event-group {
+  padding: 10px 0;
+  border-bottom: 1px solid gray;
+}
+.table-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-size: 14px;
+  padding: 5px 0;
+  color: #424242;
+}
+.table-row.header {
+  color: gray;
+}
+.table-cell.type {
+  width: 25%;
+  margin-bottom: 20px;
+}
+.table-cell.text-part {
+  display: flex;
+  width: 65%;
+}
+.table-cell.date {
+  width: 10%;
+}
+.table-cell.code {
+  width: 25%;
+}
+.table-cell.details {
+  width: 75%;
+}
+.event-label {
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 2px 4px;
+}
+.event-label.Event.type {
+  border: none;
+}
+.event-label.AllergyIntolerance {
+  background: #ffbbd9;
+}
+.event-label.Appointment {
+  background: #bac1f8;
+}
+.event-label.CarePlan {
+  background: #e6c8ea;
+}
+.event-label.Condition {
+  background: #d9ebbb;
+}
+.event-label.Diagnosis {
+  background: #f9e2da;
+}
+.event-label.Immunization {
+  background: #98ffb9;
+}
+.event-label.MedicationStatement {
+  background: #e1b4ee;
+}
+.event-label.Observation {
+  background: #98eaff;
+}
+.event-label.Procedure {
+  background: #ff9898;
+}
+
+@media only screen and (max-width: 768px) {
+  .table-cell.text-part {
+    flex-flow: column;
+  }
+  .table-cell.type {
+    padding-bottom: 20px;
+  }
+}
